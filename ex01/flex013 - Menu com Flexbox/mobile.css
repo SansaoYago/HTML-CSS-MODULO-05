@@ -1,0 +1,13 @@
+@charset "UT-8";
+
+header {
+        flex-flow: column;
+    }
+
+    header > h1 {
+        flex: 50PX;
+    }
+    header > nav {
+        flex-flow: column;
+        width: 90%;
+    }
