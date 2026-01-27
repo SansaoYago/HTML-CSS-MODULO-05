@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 5px;
+        }
+        .contain {
+            display: grid;
+            grid-template: 2fr 1fr 6fr 1fr / 1fr 2fr 1fr;
+            gap: 5px;
+            height: 98vh;
+
+            outline: 2px dotted red;
+        }
+        header {
+            background-color: lightblue;
+            grid-area: 1 / 1 / 2 / -1;}
+        menu {
+            background-color: lightcoral;
+            grid-area: 2 / 1 / 3 / -1;
+        }
+        main {
+            background-color: lightgreen;
+            grid-area: 3 / 1 / -2 / -2;
+        }
+        aside {
+            background-color: lightsalmon;
+            grid-area: 3 / -2 / -2 / -1;
+        }
+        footer {
+            background-color: lightgray;
+            grid-area: -2 / 1 / -1 / -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <header>TOPO</header>
+        <menu>MENU</menu>
+        <main>PRINCIPAL</main>
+        <aside>SECUNDARIO</aside>
+        <footer>RODAPÉ</footer>
+    </div>
+</body>
+</html>
